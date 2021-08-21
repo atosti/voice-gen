@@ -1,2 +1,3 @@
 venv
-voices/jc-denton/*.wav
+voices/*/*.wav
+voices/*/slices/
