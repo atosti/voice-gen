@@ -8,6 +8,7 @@ one_sec = 1000 #miliseconds
 folder = "voices/jc-denton/"
 file_name = "deus-ex-denton-lines.wav"
 sound = AudioSegment.from_file(folder+file_name, format="wav")
+sound = sound.set_frame_rate(22050).set_channels(1) # Mono w/ 22050 sample rate
 duration = len(sound) # Duration in miliseconds
 results = []
 
@@ -36,7 +37,6 @@ while(right < duration):
 # Export the slices into their own directory as wav files
 if not os.path.isdir(folder+"slices/"):
     sub_folder = os.mkdir(folder+"slices/")
-sound = sound.set_frame_rate(22050).set_channels(1) # Mono w/ 22050 sample rate
 cnt = 1
 for item in results:
     item.export(
