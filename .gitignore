@@ -1,3 +1,5 @@
+.vscode
+tempcodeRunnerFile.py
 venv
 voices/*/*.wav
 voices/*/slices/
